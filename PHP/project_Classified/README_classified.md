@@ -1,0 +1,1 @@
+This project is in a WIP status. It is set up, currently, as a localhost project. It is completed to a point that allows a User to sign up, confirm email address, sign in, post a classified listing, and view classified listings of certain categories. It was later absorbed into a related, though slightly different and larger project. 
