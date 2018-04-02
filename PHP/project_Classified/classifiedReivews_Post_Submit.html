@@ -1,0 +1,129 @@
+<html>
+	<head>
+		<!-- Latest compiled and minified BOOTSTRAP CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+		<!-- Custom css file -->
+		<link rel='stylesheet' href='classifiedReviews.css'></link>
+		
+		<!-- Custom JamScript Font css file -->
+		<link rel='stylesheet' href='classifiedReviews_JamScript_CustomFont.css'></link>
+		
+		<!-- font-awesome icons for classifieds (self-employment) -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		
+		
+		
+		
+		
+		<!-- jQuery CDN -->
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+				
+		<!-- Latest compiled and minified BOOTSTRAP JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+		<!-- Custom js file -->
+		<script type='text/javascript' src='classifiedReviews.js'></script>
+	</head>
+	
+	
+	
+	
+	<body>
+	
+		<div class='container col-md-12'>
+		
+		
+				<div class='col-md-12 text-center'>
+					Please refer to <a href="#">prohibited</a> listings before submitting.
+				</div>
+		
+		
+				<div id='classifiedPostModal'>
+					<!-- the 'enctype' and 'method' are needed for being able to upload files (images, videos, etc) -->
+					<form id='classifiedPostForm' action='classifiedReviews_process.php' enctype='multipart/form-data' method='POST'><!-- onsubmit='return classifiedModalSubmit();' --> <!-- action='classifiedReviews_process.php' -->
+						
+						
+						<div class='form-group'>
+							<label for='classifiedTopicInput'>Post Topic</label>
+							
+							<!-- <input type='text' class='form-control modal-text-input' id='classifiedTopicInput' name='classifiedTopic' required></input>-->
+							
+							<select class='form-control modal-text-input' id='classifiedTopicInput' name='classifiedTopic' onchange='setSubcategoryInput (this.value);' require>
+								<option selected disabled>Category</option>
+								<option value='self employment'>Self Employment</option>
+								<option value='formal employment'>Formal Employment</option>
+								<option value='buy | sell | trade'>Buy | Sell | Trade</option>
+								<option value='housing resources'>housing resources</option>
+								<option value='community resources'>community resources</option>
+							</select>
+							
+						</div>
+						
+						<div class='form-group' id='classifiedSubtopicContainer'>
+							<!-- <label for='classifiedSubtopicInput'>Post Subtopic</label> -->
+							
+							<!-- <input type='text' class='form-control modal-text-input' id='classifiedSubtopicInput' name='classifiedSubtopic' required></input> -->
+							
+							<!-- 
+							<select type='text' class='form-control modal-text-input' id='self-employmentSubtopicInput' name='classifiedSubtopic' required>
+							</select>
+							
+							<select type='text' class='form-control modal-text-input' id='formal-employmentSubtopicInput' name='classifiedSubtopic' required>
+							</select>
+							
+							<select type='text' class='form-control modal-text-input' id='buy-sell-tradeSubtopicInput' name='classifiedSubtopic' required>
+							</select>
+							
+							<select type='text' class='form-control modal-text-input' id='housing-resourcesSubtopicInput' name='classifiedSubtopic' required>
+								<option>apts | housing</option>
+								<option>for sale | real estate</option>
+								<option>housing offered</option>
+								<option>housing wanted</option>
+								<option>office | commercial</option>
+								<option>park | storage</option>
+								<option>room | offered</option>
+								<option>room | wanted</option>
+								<option>sublet | temporary</option>
+								<option>vacation | time share</option>
+							</select>
+							
+							<select type='text' class='form-control modal-text-input' id='community-resourcesSubtopicInput' name='classifiedSubtopic' required>
+							</select>
+							-->
+							
+						</div>
+						
+						<div class='form-group'>
+							<label for='classifiedStatementInput'>Post Statement</label>
+							
+							<textarea class='form-control' id='classifiedStatementInput' name='classifiedStatement' required></textarea>
+						</div>
+						
+						<div class='form-group'>
+							<label for='classifiedPhotosInput'>Upload Photos</label>
+							
+							<input type='file' class='form-control input-file' id='classifiedPhotosInput' name='file' multiple='multiple' onchange='classifiedSubmitCheck ();'></input>
+							<!-- <input type='text' class='form-control' id='classifiedPhotosInput'></input> -->
+						</div>
+						
+						
+						
+						<div class='form-group col-md-12'>
+							<div class='col-md-6 text-left'>
+								<button type='submit' class='btn btn-success' name='classifiedSubmit' id='classifiedSubmitButton' disabled>Submit</button> <!-- originally, type was not specified -->
+							</div>
+						
+						
+							<div class='col-md-6 text-right'>
+								<button class='btn btn-post-close' data-dismiss='modal'>Cancel</button>
+							</div>
+						</div>
+					</form>
+				</div>
+		
+		</div>
+		
+	</body>
+</html>

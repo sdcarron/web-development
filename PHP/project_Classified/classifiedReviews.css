@@ -1,0 +1,682 @@
+html{
+	height: 100%;
+	width: 100%;
+}
+
+
+body{
+	position: relative;
+	
+	height: 100%;
+	width: 100%;
+	
+	padding-top: 15px;
+	
+	min-height: 100%;
+}
+
+
+/*This specifies that the site's title will use the CUSTOM font provided as jamscript*/
+.site-title{
+	font-family: 'jam-script', Times, Serif;
+	margin-bottom: 30px;
+	
+	font-size:50px !important; 
+	margin-top: 30px;
+	text-align: center;
+}
+
+.site-superscript {
+	min-width: 100%;
+	
+	font-family: 'jam-script', Times, Serif;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	padding-right: 0px;
+	padding-left: 0px;
+	font-size: 20px !important;
+	
+}
+
+
+/*This specifies the display of the links in the navbar in each of the html files*/
+.navbar-option {
+	/*border: 1px solid gray;*/
+	border-radius: 5px;
+	text-align: center;
+	width: 175px;
+	color: gray;
+	background: transparent !important;
+}
+
+/*This sepcifies the HOVER dislpay of the links in the navbar in each of the html files*/
+.navbar-option:hover{
+	/*border-radius: 5px;*/
+	/*background: transparent !important;*/
+	color: #5cb85c !important;
+	font-weight: bold !important;
+	text-decoration: none !important;
+	/*text-decoration: underline !important;*/
+}
+
+.navbar-option:focus{
+	border-radius: 5px;
+	color: #5cb85c !important;
+	font-weight: bold !important;
+}
+
+.navbar-span{
+	border-radius: 5px;
+	text-align: center;
+	color: gray;
+}
+
+/*This specifies that the USERNAME DROPDOWN is hidden by default... this is set to SHOW whenever a user is LOGGED IN, inside navbarPageLoad function in classifiedReivews.js*/
+#usernameSelector{
+	/*display: none;*/
+}
+#signupSelector{
+	/*display:none;*/
+}
+#loginSelector{
+	/*display:none;*/
+}
+
+/*This specifies the display of the USERNAME DROPDOWN in the navbar in each of the html files*/
+.navbar-dropdown-option{
+	border-radius: 5px;
+	text-align: center;
+	/*width: 175px;*/
+	color: gray;
+	background: transparent !important;
+}
+
+
+/*This sepcifies the HOVER dislpay of the USERNAME DROPDOWN in the navbar in each of the html files*/
+.navbar-dropdown-option:hover{
+	/*border-radius: 5px;*/
+	background: transparent !important;
+	color: #5cb85c !important;
+	font-weight: normal !important;
+}
+
+
+/*
+.nav a:focus{
+	color: #5cb85c !important;
+}
+
+
+
+.nav a:active{
+	color: #5cb85c !important;
+	
+}
+*/
+
+
+.container{
+	/*box-sizing: border-box;*/
+	
+	height: 100%;
+	width: 100%;
+	
+	position: relative;
+	
+	/*padding: 0 0 50px;*/
+}
+
+
+#classified{
+	height: 60%;
+	padding-top: 5%;
+}
+
+
+#classifiedDisplay{
+	
+	margin-top: 100px;
+	/*padding-left: 105px;*/
+	width: 100% !important;
+}
+
+	
+	/*This is for specifying the space between Line Items/Classified Links in 'classifiedReivews.html'*/
+	#classifiedDisplay li{
+		margin-top: 5px !important;
+		
+		margin-bottom: 5px !important;
+	}
+	
+	
+	/*This is for setting the HOVER specifications for the Classified Links in 'classifiedReivews.html'*/
+	#classifiedDisplay a:hover{
+		color: #5cb85c !important;
+		font-weight: bold !important;
+		/*font-size: 10px;*/
+		text-decoration: none !important;
+	}
+	
+	/*This is for creating the breaking line at the end of the FORMAL Employment Category in 'classifiedReviews.html'*/
+	#classifiedDisplayEmploymentEndingTop {
+		border-top: 1px solid gray !important;
+		padding-top: 5px;
+		
+		clear:both;
+	}
+
+	
+	.dropdown-submenu {
+		position: relative;
+	}
+
+	/*
+	.dropdown-submenu>.dropdown-menu {
+		top: 0;
+		left: 100%;
+		margin-top: -6px;
+		margin-left: -1px;
+		-webkit-border-radius: 0 6px 6px 6px;
+		-moz-border-radius: 0 6px 6px;
+		border-radius: 0 6px 6px 6px;
+	}
+	
+	
+	.dropdown-submenu:hover>.dropdown-menu {
+		display: block;
+	}
+	*/
+	
+	
+	
+	.post-btn {
+		width: 170px;
+		text-align: center;
+		/*display: none;*/
+	}
+	
+	/*
+	#classifiedPostSignupLoginNotification{
+		
+		font-size: 15px;
+		font-weight: bold;
+		color: #5cb85c !important;
+		display: none;
+	}
+	
+	#reviewPostSignupLoginNotification{
+		
+		font-size: 15px;
+		font-weight: bold;
+		color: #5cb85c !important;
+		display: none;
+	}
+	*/
+	
+	.classified-columns-menu{
+		position: relative;
+		clear: both;
+		
+		margin-top: 25%;
+		
+		height: 100%;
+		
+		min-height: 0%;
+		min-width: 0%;
+		
+		
+		padding: 5px;
+		border: 1px solid gray;
+		border-radius: 5px;
+		background: gray;
+	}
+	
+	.classified-columns-menu ul{
+		margin-top: 25%;
+		margin-bottom: 25%;
+		
+		text-align: center;
+	}
+	
+	
+	
+	
+	/*This is used for the Classified Headings in 'classifiedReviews.html'*/
+	.classified-column-header{
+		
+		position: relative;
+		clear: both;
+		
+		min-width: 100%;
+		
+		text-align: center;
+		
+		margin-top: 5px;
+		padding: 5px;
+		color: white;
+		border: 1px solid gray;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+		background: gray;
+	}
+	
+	/*
+	.classified-column-header:hover {
+		background: #5cb85c !important;
+		box-shadow: 0px 0px 10px #5cb85c !important;
+		/*box-shadow: none;
+		border: 1px solid #5cb85c !important;
+	}
+	*/
+	
+	.classified-column-container {
+		overflow: auto;
+	}
+	
+	
+	.classified-column-container:hover .classified-column-header {
+		background: #5cb85c !important;
+		box-shadow: 0px 0px 10px #5cb85c !important; /*#9900ff*/
+		/*box-shadow: none;*/
+		border: 1px solid #5cb85c !important;
+	}
+	
+	
+	.classified-column-container ul li{
+		list-style-type: none;
+	}
+	
+	.classified-column-container:hover ul li a{
+		color: #5cb85c !important;
+	}
+	
+	.classified-column-container:hover ul li a:hover{
+		color: black !important;
+	}
+	
+	/*
+	.classified-column-container:hover .classified-column {
+		border: 1px solid #5cb85c !important;
+		box-shadow: 0px 0px 10px #5cb85c !important;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+	*/
+	
+	.classified-column-overflow{
+		height: 800px;
+		overflow-y: scroll;
+	}
+	
+	.classified-column-overflow::-webkit-scrollbar {
+		display: none;
+	}
+	
+	.classified-column{
+		/*
+		height: 600px;
+		overflow-y: scroll;
+		*/
+		
+		position:relative;
+		clear:both;
+		
+		min-width: 100%;
+		
+		padding: 20px;
+		border: none;/*1px solid gray;*/
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		
+		/*
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+		
+		-webkit-column-gap: 3%;
+		-moz-column-gap: 3%;
+		column-gap: 3%;
+		
+		-webkit-column-rule: solid 1px red;
+		-moz-column-rule: solid 1px red;
+		column-rule: solid 1px red;
+		*/
+		
+		/*display: none;*/
+		font-size: 12px;
+		/*width: 300px;*/
+		float: left;
+	}
+	
+	.classified-columns-left{
+		
+		position:relative;
+		clear:both;
+		
+		min-width: 100%;
+		
+		padding: 20px;
+		border: 1px solid gray;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		
+
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+		
+		-webkit-column-gap: 3%;
+		-moz-column-gap: 3%;
+		column-gap: 3%;
+		
+		-webkit-column-rule: solid 1px red;
+		-moz-column-rule: solid 1px red;
+		column-rule: solid 1px red;
+		
+		/*display: none;*/
+		font-size: 12px;
+		/*width: 300px;*/
+		float: left;
+	}
+	
+	
+	
+	
+	
+	.classified-columns-middle-exchange{
+		
+		position:relative;
+		clear:both;
+		
+		min-width: 100%;
+		
+		padding: 20px;
+		border: 1px solid gray;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+		
+		-webkit-column-gap: 3%;
+		-moz-column-gap: 3%;
+		column-gap: 3%;
+		
+		-webkit-column-rule: solid 1px silver;
+		-moz-column-rule: solid 1px silver;
+		column-rule: solid 1px silver;
+		
+		/*display: none;*/
+		font-size: 12px;
+		/*width: 300px;*/
+		float: left;
+	}
+	
+	
+	
+	.classified-columns-middle{
+		
+		position:relative;
+		clear:both;
+		
+		min-width: 100%;
+		
+		padding: 20px;
+		border: 1px solid gray;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		
+
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+		
+		-webkit-column-gap: 3%;
+		-moz-column-gap: 3%;
+		column-gap: 3%;
+		
+		-webkit-column-rule: solid 1px red;
+		-moz-column-rule: solid 1px red;
+		column-rule: solid 1px red;
+		
+		/*display: none;*/
+		font-size: 12px;
+		/*width: 300px;*/
+		float: left;
+	}
+	
+	
+	
+	.classified-columns-employment{
+		
+		position:relative;
+		clear: both;
+		
+		min-width: 100%;
+		
+		padding: 20px;
+		border: 1px solid gray;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+		
+		-webkit-column-gap: 3%;
+		-moz-column-gap: 3%;
+		column-gap: 3%;
+		
+		-webkit-column-rule: solid 1px silver;
+		-moz-column-rule: solid 1px silver;
+		column-rule: solid 1px silver;
+		
+		/*display: none;*/
+		font-size: 12px;
+		/*width: 300px;*/
+		float: right;
+	}
+	
+	
+	
+	
+	
+	
+	
+	/*This is for determinig which classified subtopic is clicked on 'classifiedReviews.html'*/
+	/*Creating a class for the subtopics in the classifieds allows me to write only one function call (to classifiedPosts_Subtopic_Display in classifiedReviews.js) in order to find which element was selected */
+	.classified-subtopic{
+	}
+	
+	
+	.classified-statement{
+		
+	}
+	
+	.list-display{
+		
+	}
+	
+	
+	
+	
+	
+	
+	/*This is specifically for determining what to display (User's Reviews or User's Classifieds) in 'classifiedReivews_Post_UserList*/
+	/*Creating a class for the user's navigation menu allows for me to write only one function call (to classifiedPosts_LoggedInUser_Display in classifiedReviews.js) in order to find which dropdown navigation element was selected */
+	.dropdown-user-navigation-option{
+		border-radius: 5px;
+		text-align: left !important;
+		width: 175px;
+		color: gray;
+		background: transparent !important;		
+	}
+	
+	#userClassified{
+		display: none;
+	}
+	#userReview{
+		display: none;
+	}
+	
+	
+	
+	/*This is for determining what to display (Signup or Login form) in 'classifiedReviews_SignupLogin.html'*/
+	/*Creating a class for user selection of Login or Signup allows one function call (to in classifiedReviews.js), in order to find out WHICH account information submission element was selected*/
+	.signup-login-user-navigation-option{
+		
+	}
+	
+	/*This specifies that BOTH of the forms on 'classifiedReviews_SignupLogin.html' are HIDDEN by default, so that only the appropriate one is displayed for each navbar selection*/
+	#signupLoginContainer{
+		
+	}
+	
+	#signupModal{
+		/*display: none;*/
+	}
+	#loginModal{
+		/*display: none;*/
+	}
+
+	
+/*This specifies display for the TITLE text in the modal for posting Classifieds or Reviews*/
+#inputModalTitle{
+	text-align: center;
+}
+	
+.modal-text-input{
+	width: 250px;
+}
+
+.input-text:focus{
+	box-shadow: 0px 0px 10px #5cb85c !important; /*#9900ff*/
+	box-shadow: none;
+	border: 1px solid #5cb85c !important;
+}
+
+.input-file{
+	border: none;
+	box-shadow:none;
+	padding: 5px;
+	
+	margin-bottom: 50px;
+}
+
+.input-file:focus{
+	border: none;
+	box-shadow: none;
+}
+
+#classifiedStatementInput{
+	margin-top: 10px !important;
+}
+
+.modal-footer{
+	border-top: none !important;
+}
+
+
+#review{
+	padding-top: 5%;
+	height: 45%;
+}
+
+#postedClassified{
+	display: show;
+}
+
+
+/*
+#self-employmentSubtopicInput{
+	display: none;
+}
+#formal-employmentSubtopicInput{
+	display: none;
+}
+#buy-sell-tradeSubtopicInput{
+	display:none;
+}
+#housing-resourcesSubtopicInput{
+	display: none;
+}
+#community-resourcesSubtopicInput{
+	display:none;
+}
+*/
+
+
+.footer{
+
+	position: relative;
+	clear: both;
+	/*
+	position: relative;
+	clear:both;
+	*/
+	
+	padding: 10px;
+	background: gray;
+	
+	margin-top: 10%;
+	/*height: 50px;*/
+	width: 100%;
+}
+
+
+
+
+/*This specifies display for the CLOSE button in the modal windows for Posting Classifieds or Reviews*/
+.btn-post-close{
+	background: silver;
+	color: white;
+}
+
+
+
+
+#userClassified{
+	display: show;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*This Section refers to the Table used for displaying listings when a user Searches OR Selects a Subcategory OR Select's his/her personal listings*/
+table{
+	border: 0px !important; /*This gets rid  of the border around the outside of the ENTIRE table*/
+	
+	/*border-collapse: collapse !important;*/
+}
+
+th {
+	text-overflow: ellipsis !important;
+	border: 1px solid gray !important;
+	background: gray !important;
+}
+
+td{
+	text-align: left; /*This makes the text align to the LEFT side of the cell (td AND th)*/
+	max-width: 500px; /*This restricts the maximum width of a cell within the table, which thus defines the threshold of overflow*/
+	overflow: hidden; /*This makes the overflow HIDE*/
+	white-space: nowrap; /*This makes the overflow inside of the cell NOT wrap around to a new line within the cell*/
+	text-overflow: ellipsis !important; /*This makes the overflow display as an ellipsis "..."*/
+	
+	border: 0px !important; /*This gets rid of the borders around the cells within the table (td AND th, apparently)*/
+}
+
+table td a{
+	color: gray;
+}
+
+table td a:hover{
+	color: #5cb85c;
+}

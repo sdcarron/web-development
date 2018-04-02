@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+
+
+
+
+<html>
+	<head>
+		<title>San Can - List</title>
+		
+		
+		
+		
+		<!-- Latest compiled and minified BOOTSTRAP CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+		<!-- Custom css file -->
+		<link rel='stylesheet' href='classifiedReviews.css'></link>
+		
+		<!-- Custom JamScript Font css file -->
+		<link rel='stylesheet' href='classifiedReviews_JamScript_CustomFont.css'></link>
+		
+		<!-- font-awesome icons for classifieds (self-employment) -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		
+		
+		
+		
+		
+		<!-- jQuery CDN -->
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+				
+		<!-- Latest compiled and minified BOOTSTRAP JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+		<!-- Custom js file -->
+		<script type='text/javascript' src='classifiedReviews.js'></script>
+		
+	</head>
+	
+	
+	
+	
+	<body onload='navbarPageLoad ();'>
+		<nav class='navbar'>
+				<div class='col-md-12'>
+					<div class='col-md-12 site-title'> <!-- site-title -->
+						<h1 class='site-title'>San Can - List</h1>
+					</div>
+				</div>
+				
+				<!-- <div class='col-md-6'>
+					<div class='col-md-4 col-md-offset-1'> -->
+						<ul class='nav navbar-nav navbar-left'>
+							<li> <a class='navbar-option' href='javascript:' id='classifiedSelector'>Classifieds</a> </li>
+							<!-- <li> <a class='navbar-option' href='classifiedReviews_ReviewsHome.html' id='reviewSelector'>Reviews</a> </li> -->
+							<li> <a class='navbar-option' href='javascript:' id='aboutSelector'>About Us</a> </li>
+							<li> <a class='navbar-option' href='javascript:' data-toggle='tooltip' title='under construction'>Sister Sites</a> </li>
+						</ul>
+				<!--	<div>
+				<div> -->
+				
+				
+					<ul	class='nav navbar-nav navbar-right' id='accountSelectorPane'>
+						<!--
+						<form class='inline'>
+							<input type='text' class='modal-text-input' placeholder='Email'></input>
+							
+							<input type='password' class='modal-text-input' placeholder='Password'></input>
+						</form>
+						-->
+						
+						<!-- <li> <a class='navbar-option signup-login-user-navigation-option' href='classifiedReviews_SignupLogin.html' id='signupSelector'>signup</a> </li> -->		 <!-- data-toggle='modal' data-target='#inputModal'>signup</a> </li> -->
+						<!-- <li> <a class='navbar-option signup-login-user-navigation-option' href='classifiedReviews_SignupLogin.html' id='loginSelector'>login</a> </li> -->			 <!-- data-toggle='modal' data-target='#inputModal'>login</a> </li> -->
+						
+						<!-- <li class='dropdown pull-right'> <a class='navbar-dropdown-option' href='#' class='dropdown-toggle' data-toggle='dropdown' id='usernameSelector'> <span id='usernameText'>Account Info</span> <span class='caret'></span> </a>
+							<ul class='dropdown-menu' id='usernameAccountOptions'>
+								<li>submitted reviews</li>
+								<li> <a class='navbar-option dropdown-user-navigation-option' href='classifiedReviews_Post_UserList.html' id='userPostedClassifiedSelector'>my classifieds</a> </li>
+								<li>messages</li>
+								<li> <a class='navbar-option dropdown-user-navigation-option' href='' id='userLogout'>logout</a> </li>
+							</ul>
+						</li> -->
+					</ul>
+				
+
+		
+		</nav>
+	
+	<div>
+	
+		<!-- This is the body DISPLAY -->
+		<div class='container col-md-12'>
+		
+			<div class='help-block'></div>
+		
+			<!-- This is the CLASSIFIEDS div -->
+			<div class='col-md-12' id='classified'>
+			
+					<div class='col-md-8' id='classifiedMenu'>
+					
+						
+					
+					
+					
+						<form>
+							<div class='form-group  col-md-9 text-center' id='classifiedSearch'>
+								
+								<!--<label for='classifiedSearchField'>Search Classifieds</label>-->
+								
+								<div class='input-group'>
+									<input type='text' id='classifiedSearchField' class='input-text form-control' placeholder='Search Classifieds'></input>
+									
+									<span class='input-group-btn'>
+										<button id='classifiedSearchButton' class='btn btn-success' onclick=''> <i class='glyphicon glyphicon-search'></i> </button>
+									</span>
+								</div>
+									
+							</div>
+							
+							<nav class='navbar'>
+							
+								<ul class='nav navbar-nav'>
+									<li>
+										<a  class='navbar-option' href='javascript:' id='classifiedPostButton' onclick="postSubmit ();" > <!-- class='btn btn-success post-btn text-center pull-left' -- ><!-- data-toggle='modal' data-target='#inputModal'> -->
+											Post Classified <!--<span> &nbsp; &nbsp; </span>-->
+											
+											<!-- <i class='fa fa-newspaper-o'></i> -->
+										</a>
+									</li>
+								</ul>
+							
+							</nav>
+							
+						</form>
+						
+						
+						<div class='col-md-12' id='classifiedPost'>
+							<!--<div class='help-block'></div>
+							<div class='help-block'></div>
+							<div class='help-block'></div>-->
+							<!-- <nav class='navbar'> -->
+								
+									<ul class='nav navbar-nav'>
+										<li> <a href='javascript:' class='navbar-option text-left'> Personal Safety </a> </li>
+									
+									
+									
+										<li> <a href='javascript:' class='navbar-option'>Avoid Fraud</a> </li>
+									
+									
+									
+										<li> <a href='javascript: ' class='navbar-option'>Terms of Use</a> </li>
+									
+									
+									
+										<li> <a href='javascript:' class='navbar-option'>Privacy Policy</a> </li>
+									
+									
+									
+										
+									</ul>
+							<!-- </nav> -->
+							
+						</div>
+						
+						
+						<!-- <br><br><br><br> -->
+						
+						<!--
+						<div class='col-md-12' id='classifiedPost'>
+							<div class='help-block'></div>
+							<div class='help-block'></div>
+							<div class='help-block'></div>
+						
+							<button class='btn btn-success post-btn text-center' id='classifiedPostButton'  data-toggle='modal' data-target='#inputModal'>
+								<span>Post Classified &nbsp; &nbsp;</span>
+								
+								<i class='fa fa-newspaper-o'></i>
+							</button>
+						</div>
+						-->
+						
+						<!-- <br><br><br> -->
+						
+						<!--
+						<div class='pull-left' id='classifiedProperty'>
+							<div class='help-block'></div>
+							<div class='help-block'></div>
+							<div class='help-block'></div>
+						
+							<button class='btn btn-success col-md-12 classified-menu' id='classifiedPost'>
+								<span class='pull-left'>Exchange &nbsp; &nbsp;</span>
+								
+								<i class='fa fa-exchange pull-right'></i>
+							</button>
+						</div>
+						
+						
+						<br><br><br>
+						
+						
+						<div class='pull-left' id='classifiedHousing'>
+							<div class='help-block'></div>
+							<div class='help-block'></div>
+							<div class='help-block'></div>
+						
+							<button class='btn btn-success col-md-12 classified-menu' id='classifiedPost'>
+								<span class='pull-left'>Housing &nbsp; &nbsp;</span>
+								
+								<i class='fa fa-home pull-right'></i>
+							</button>
+						</div>
+						
+						
+						<br><br><br>
+						
+						
+						<div class='pull-left' id='classifiedCommunity'>
+							<div class='help-block'></div>
+							<div class='help-block'></div>
+							<div class='help-block'></div>
+						
+							<button class='btn btn-success col-md-12 classified-menu' id='classifiedPost'>
+								<span class='pull-left'>Community &nbsp; &nbsp;</span>
+								
+								<i class='fa fa-group pull-right'></i>
+							</button>
+						</div>
+						
+						
+						<br><br><br>
+						
+						
+						<div class='pull-left' id='classifiedSelfEmployment'>
+							<div class='help-block'></div>
+							<div class='help-block'></div>
+							<div class='help-block'></div>
+						
+							<button class='btn btn-success col-md-12 classified-menu' id='classifiedSelfEmploymentButton'>
+								<span class='pull-left'>Self Employment &nbsp; &nbsp;</span>
+								
+								<i class='fa fa-user pull-right'></i>
+							</button>
+						</div>
+						
+						
+						<br><br><br>
+						
+						
+						<div class='pull-left' id='classifiedEmployment'>
+						
+							<div class='help-block'></div>
+							<div class='help-block'></div>
+							<div class='help-block'></div>
+						
+							
+							<button class='btn btn-success classified-menu' id='classifiedEmploymentButton' onclick='setClassifiedDisplay(this);'>
+								<span class='pull-left'>Employment &nbsp; &nbsp; &nbsp;</span>
+
+								<i class='fa fa-id-card pull-right'></i>
+							</button>
+							
+						</div>
+						-->
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class='col-md-4'>
+					</div>
+				
+				
+				
+			
+				
+				<!-- <div class='col-md-8' id='classifiedDisplay'>
+					This is Where classified information is displayed
+				</div> -->
+				
+				
+				
+				<div class='col-md-12' id='classifiedDisplay'>
+					<!-- This is Where classified information is displayed -->
+						
+						<!--
+						
+						<div class='col-md-3'>
+							<div class='classified-columns-menu'>
+								<ul>
+									<li>Personal Safety</li>
+								</ul>
+								
+								<ul>
+									<li>Avoid Fraud</li>
+								</ul>
+								
+								<ul>
+									<li>Contact Us</li>
+								</ul>
+								
+								<ul>
+									<li>Terms of Use</li>
+								</ul>
+								
+								<ul>
+									<li>Privacy Policy</li>
+								</ul>
+								
+								<ul>
+									<li>Legal Considerations</li>
+								</ul>
+								
+								<ul>
+									<li>Sister Sites</li>
+									<li>About Us</li>
+									<li>Partners</li>
+									<li>San Can Actus Jobs</li>
+								</ul>
+							</div>
+						</div>
+						
+						-->
+					
+						
+				
+					
+						<div class='col-md-3 classified-column-container'> <!-- id='classifiedSelfEmploymentDisplay' -->
+							
+							
+								<div class='col-md-12 classified-column-header text-center'>
+									
+									<h6>Self Employment &nbsp;<i class='fa fa-male fa-2x'></i><i class='fa fa-female fa-2x'></i> </h6>
+									
+								</div>
+								
+								<div class='col-md-12 classified-column '> <!-- classified-column-overflow --> <!-- classified-columns-middle -->
+							
+									<ul>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-child'></i> &nbsp; --> accessory | clothing</li>
+											<li class='col-md-10 col-md-offset-2'>account | finance</li>
+											<li class='col-md-10 col-md-offset-2'>advertise | brand | market</li>
+											<li class='col-md-10 col-md-offset-2'>advise | consult</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-home'></i> &nbsp; --> art | design | media</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-graduation-cap'></i> &nbsp; --> automotive | maint</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-graduation-cap'></i> &nbsp; --> beauty | hair | spa</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-briefcase'></i> &nbsp; --> b and b | lodging</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-keyboard'></i> &nbsp; --> child care</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-line-chart'></i> &nbsp; --> construction | maint</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-wrench'></i> &nbsp; --> culinary</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-paw'></i> &nbsp; --> decoration | design</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-paintbrush'></i> &nbsp; --> delivery | transport</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-tree'></i> &nbsp; --> education</li>
+											<li class='col-md-10 col-md-offset-2'>entertain | event</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-cutlery'></i> &nbsp; --> errand</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-lemon-o'></i> &nbsp; --> farm | produce <!-- = apple (glyphicon-apple) --> </li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-shopping-cart'></i> &nbsp; --> fitness | nutrition</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-shopping-cart'></i> &nbsp; --> general business</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-shopping-cart'></i> &nbsp; --> general labor</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-shopping-cart'></i> &nbsp; --> health care</li>
+											<li class='col-md-10 col-md-offset-2'>hospice</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-shopping-cart'></i> &nbsp; --> landscape | maint</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-shopping-cart'></i> &nbsp; --> legal</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-shopping-cart'></i> &nbsp; --> manufacture</li>
+											<li class='col-md-10 col-md-offset-2'>mechanic | maint</li>
+											<li class='col-md-10 col-md-offset-2'>miscellaneous | odd job</li>
+											<li class='col-md-10 col-md-offset-2'>model | promote</li>
+											<li class='col-md-10 col-md-offset-2'>organize | plan</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-shopping-cart'></i> &nbsp; --> pet care</li>
+											<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-shopping-cart'></i> &nbsp; --> technology</li>
+									</ul>
+								</div>
+						
+
+						</div>
+						
+		<!--	
+		accessories | clothing
+		art | media | design
+		automotive | maintenance
+		beauty | hair
+		beverage | food | hospitality
+		child care
+		construction | maintenance
+		culinary
+		decoration | design
+        delivery | transport
+		education
+		errand
+		farm | produce
+		finance
+		fitness | nutrition | personal dev
+        general business
+		general labor
+        health care
+		landscape | maintenance
+        legal
+		manufacturing
+		pet care
+		salon | spa
+        technology
+        
+        
+        
+        
+        
+        
+        
+        
+		-->				
+						
+						
+						
+						<div class='col-md-3 classified-column-container'> <!-- id='classifiedEmploymentDisplay' -->
+							
+							<div class='col-md-12 classified-column-header' id='classified-header-2'>
+								<h6>Formal Employment &nbsp;<i class='fa fa-briefcase fa-2x'></i> </h6>
+							</div>
+							
+							<div class='col-md-12 classified-column'> <!-- classified-column-overflow --> <!-- classified-columns-employment -->
+								<ul >
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-line-chart fa-2x'></i> --> account | finance</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-fax-2x'></i> --> admin | office</li>
+									<li class='col-md-10 col-md-offset-2'>advertise | brand | market</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-building-o fa-2x'></i> --> arch | engineer</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-paint-brush fa-2x'></i> --> art | design | media</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-flask fa-2x'></i> --> biotech | science</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-suitcase fa-2x'></i> --> business | development</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-hand-stop-o fa-2x'></i> --> craft | skilled trade</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-user fa-2x'></i> --> customer service</li>
+									<li class='col-md-10 col-md-offset-2'>dental | health | medical</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-pencil fa-2x'></i> --> edit | write</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-graduation-cap fa-2x'></i> --> education</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-film fa-2x'></i> --> film | tv | video</li>
+									<li class='col-md-10 col-md-offset-2'>fitness | nutrition</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-glass fa-2x'></i> --> food | beverage</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-wrench fa-2x'></i> --> general labor</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-institution fa-2x'></i> --> government</li>
+									<li class='col-md-10 col-md-offset-2'>graphic | web design</li>
+									<li class='col-md-10 col-md-offset-2'>it | network | systems</li>
+									<li class='col-md-10 col-md-offset-2'>hospitality</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-id-badge fa-2x'></i> --> human resource</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-gavel fa-2x'></i> --> legal</li>
+									<li class='col-md-10 col-md-offset-2'>management</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-gears fa-2x'></i> --> manufacture</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <span class='fa-stack'><i class='fa fa-ban fa-stack-2x'></i> <i class='fa fa-dollar fa-stack-1x'></i></span> --> nonprofit</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-home fa-2x'></i> --> real estate</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-money fa-2x'></i> --> retail | wholesale</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-handshake-o fa-2x'></i> --> sales</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-heartbeat fa-2x'></i> --> salon | spa</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-shield fa-2x'></i> --> security</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-code fa-2x'></i> --> software | qa</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-phone fa-2x'></i> --> tech support</li>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-truck fa-2x'></i> --> transport</li>
+								</ul>
+								
+								
+								<ul id='classifiedDisplayEmploymentEndingTop'>
+									<li class='col-md-10 col-md-offset-2'> <!-- <i class='fa fa-random fa-2x'></i> --> miscellaneous</li>
+									<li class='col-md-10 col-md-offset-2'>part-time</li>
+									<li class='col-md-10 col-md-offset-2'>resumes</li>
+									<li class='col-md-10 col-md-offset-2'>ride share</li>
+								</ul>
+							</div>
+						</div>
+						
+							
+							
+							
+						
+						
+						<div class='col-md-3 classified-column-container'> <!-- id='classifiedBuySellTradeDisplay' -->
+								
+								<div class='col-md-12 classified-column-header' id='classified-header-3'>
+									<h6>Buy | Sell | Trade &nbsp;<i class='fa fa-exchange fa-2x'></i> </h6>
+								</div>
+								
+								<div class='col-md-12 classified-column'> <!-- classified-column-overflow --> <!-- classified-columns-middle-exchange -->
+									<ul>
+										<li class='col-md-10 col-md-offset-2'>accessory | clothing</li>
+										<li class='col-md-10 col-md-offset-2'>antique</li>
+										<li class='col-md-10 col-md-offset-2'>appliance | household</li>
+										<li class='col-md-10 col-md-offset-2'>art | craft</li>
+										<li class='col-md-10 col-md-offset-2'>athletic | sport</li>
+										<li class='col-md-10 col-md-offset-2'>atv | snow | utv</li>
+										<li class='col-md-10 col-md-offset-2'>auto part</li>
+										<li class='col-md-10 col-md-offset-2'>baby | child</li>
+										<li class='col-md-10 col-md-offset-2'>beauty | health</li>
+										<li class='col-md-10 col-md-offset-2'>bicycle</li>
+										<li class='col-md-10 col-md-offset-2'>boat | camper | rv | trailer</li>
+										<li class='col-md-10 col-md-offset-2'>book</li>
+										<li class='col-md-10 col-md-offset-2'>car | truck</li>
+										<li class='col-md-10 col-md-offset-2'>cd | dvd | vhs</li>
+										<li class='col-md-10 col-md-offset-2'>collectible</li>
+										<li class='col-md-10 col-md-offset-2'>computer</li>
+										<li class='col-md-10 col-md-offset-2'>electronic</li>
+										<li class='col-md-10 col-md-offset-2'>farm | garden</li>
+										<!-- <li class='col-md-10 col-md-offset-2'>free</li> -->
+										<li class='col-md-10 col-md-offset-2'>furniture | household</li>
+										<li class='col-md-10 col-md-offset-2'>game | toy</li>
+										<li class='col-md-10 col-md-offset-2'>general</li>
+										<li class='col-md-10 col-md-offset-2'>heavy equipment</li>
+										<li class='col-md-10 col-md-offset-2'>jewelry</li>
+										<li class='col-md-10 col-md-offset-2'>material</li>
+										<li class='col-md-10 col-md-offset-2'> <a href='classifiedReviews_Post_ClassifiedList.html?motorcycles-public' class='navbar-option classified-subtopic' id='motorcycles'>motorcycles</a> </li>
+										<li class='col-md-10 col-md-offset-2'>music instrument</li>
+										<li class='col-md-10 col-md-offset-2'>office</li>
+										<li class='col-md-10 col-md-offset-2'>outdoor | sport</li>
+										<li class='col-md-10 col-md-offset-2'>photo | video</li>
+										<li class='col-md-10 col-md-offset-2'>phone | tablet</li>
+										<li class='col-md-10 col-md-offset-2'>ticket</li>
+										<li class='col-md-10 col-md-offset-2'>tool</li>
+										<li class='col-md-10 col-md-offset-2'>video game</li>
+										<!-- <li class='col-md-10 col-md-offset-2'>wanted</li> -->
+									</ul>
+									
+									<ul id='classifiedDisplayEmploymentEndingTop'>
+									
+										<li class='col-md-10 col-md-offset-2'>barter | trade</li>
+										<li class='col-md-10 col-md-offset-2'>free</li>
+										<li class='col-md-10 col-md-offset-2'>wanted</li>
+									</ul>
+								</div>
+						</div>
+						
+						
+						
+						
+						
+						
+						
+						<div class='col-md-3'>
+							
+							<div class='classified-column-container'>
+								<div class='col-md-12 classified-column-header' id='classified-header-4'>
+									
+									<h6>Housing Resources &nbsp;<i class='fa fa-home fa-2x'></i> </h6>
+									
+								</div>
+								
+								
+								<div class='col-md-12 classified-column'> <!-- classified-columns-left -->
+									<ul>	
+										<li class='col-md-10 col-md-offset-2'> <a href='classifiedReviews_Post_ClassifiedList.html?general-housing resources-apts | housing' class='classified-subtopic navbar-option' id='apts | housing'>apts | housing</a> </li>
+										<li class='col-md-10 col-md-offset-2'>housing swap</li>
+										<li class='col-md-10 col-md-offset-2'>housing wanted</li>
+										<li class='col-md-10 col-md-offset-2'>office | commercial</li>
+										<li class='col-md-10 col-md-offset-2'>parking | storage</li>
+										<li class='col-md-10 col-md-offset-2'>real estate for sale</li>
+										<li class='col-md-10 col-md-offset-2'>rooms | shared</li>
+										<li class='col-md-10 col-md-offset-2'>rooms wanted</li>
+										<li class='col-md-10 col-md-offset-2'>sublets | temporary</li>
+										<li class='col-md-10 col-md-offset-2'>vacation rentals</li>
+									</ul>
+								</div>
+							</div>
+							
+							<br>
+							
+							<div class='classified-column-container'>
+								<div class='col-md-12 classified-column-header' id='classified-header-5'>
+									<h6>Community Resources &nbsp;<i class='fa fa-users fa-2x'></i> </h6>
+								</div>
+								
+								<div class='col-md-12 classified-column'> <!-- classified-columns-left -->
+									<ul>
+										<li class='col-md-10 col-md-offset-2'>activity</li>
+										<li class='col-md-10 col-md-offset-2'>art</li>
+										<li class='col-md-10 col-md-offset-2'>child care</li>
+										<li class='col-md-10 col-md-offset-2'>class</li>
+										<li class='col-md-10 col-md-offset-2'>event</li>
+										<li class='col-md-10 col-md-offset-2'>general</li>
+										<li class='col-md-10 col-md-offset-2'>group</li>
+										<li class='col-md-10 col-md-offset-2'>local news | politics</li>
+										<li class='col-md-10 col-md-offset-2'>music</li>
+										<li class='col-md-10 col-md-offset-2'>pet</li>
+										<!-- <li class='col-md-10 col-md-offset-2'>politics</li> -->
+										<li class='col-md-10 col-md-offset-2'>ride share</li>
+										<li class='col-md-10 col-md-offset-2'>volunteer</li>
+										<li class='col-md-10 col-md-offset-2'>garage sale</li>
+										<li class='col-md-10 col-md-offset-2'>lost | found</li>
+									</ul>
+								</div>
+							</div>
+							
+						
+						
+							
+							<!-- 
+							<div class='col-md-12 classified-columns-header'>
+								<h6>Lost | Found &nbsp;<i class='fa fa-map-marker fa-2x'></i> </h6>
+							</div>
+							
+							<div class='col-md-12 classified-columns-left'>
+								<ul>
+									<li class='col-md-10 col-md-offset-2'>electronics</li>
+									<li class='col-md-10 col-md-offset-2'>clothing | accessories</li>
+									<li class='col-md-10 col-md-offset-2'>academic | books</li>
+									<li class='col-md-10 col-md-offset-2'>identification | finance</li>
+									<li class='col-md-10 col-md-offset-2'>pet</li>
+									<li class='col-md-10 col-md-offset-2'>sports</li>
+									<li class='col-md-10 col-md-offset-2'>miscellaneous</li>
+								</ul>
+							</div>
+							-->
+							
+						</div>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<div class='col-md-4'>
+						
+							
+							
+						</div>
+						
+						
+						
+				</div>
+				
+			
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<div class='modal modal-fade' id='inputModal' data-backdrop='static'>
+				<div class='modal-dialog'>
+					<div class='modal-content'>
+						<div class='modal-header'>
+							<button class='close' data-dismiss='modal'>&times;</button>
+							<h4 id='inputModalTitle'></h4>
+						</div>
+						
+						
+						
+						
+						<!-- This is where the user INTERACTS with Classifieds information -->
+						<div class='modal-body' id='inputModalBody'>
+							
+							
+							
+							
+							<!-- This is the CLASSIFIED post modal -->
+							<div id='classifiedPostModal'>
+								<!-- the 'enctype' and 'method' are needed for being able to upload files (images, videos, etc) -->
+								<form id='classifiedPostForm' action='classifiedReviews_process.php' enctype='multipart/form-data' method='POST'><!-- onsubmit='return classifiedModalSubmit();' --> <!-- action='classifiedReviews_process.php' -->
+									
+									
+									<div class='form-group'>
+										<label for='classifiedTopicInput'>Post Topic</label>
+										
+										<input type='text' class='form-control modal-text-input' id='classifiedTopicInput' name='classifiedTopic' required></input>
+									</div>
+									
+									<div class='form-group'>
+										<label for='classifiedSubtopicInput'>Post Subtopic</label>
+										
+										<input type='text' class='form-control modal-text-input' id='classifiedSubtopicInput' name='classifiedSubtopic' required></input>
+									</div>
+									
+									<div class='form-group'>
+										<label for='classifiedStatementInput'>Post Statement</label>
+										
+										<textarea class='form-control' id='classifiedStatementInput' name='classifiedStatement' required></textarea>
+									</div>
+									
+									<div class='form-group'>
+										<label for='classifiedPhotosInput'>Upload Photos</label>
+										
+										<input type='file' class='form-control' id='classifiedPhotosInput' name='file' multiple='multiple'></input>
+										<input type='text' class='form-control' id='classifiedPhotosInput'></input>
+									</div>
+									
+									
+									
+									<div class='form-group col-md-12'>
+										<div class='col-md-6 text-left'>
+											<button type='submit' class='btn btn-success' name='classifiedSubmit' id='classifiedSubmitButton'>Submit</button> <!-- originally, type was not specified -->
+										</div>
+									
+									
+										<div class='col-md-6 text-right'>
+											<button class='btn btn-post-close' data-dismiss='modal'>Cancel</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							
+							
+							
+							
+							
+							<!-- This is the REVIEW post modal -->
+							<div id='reviewPostModal'>
+								<form>
+									This is the REVIEW post modal
+								</form>
+							</div>
+							
+							
+							
+							
+							
+							
+							<!-- This is the SIGNUP post modal -->
+							<div id='signupModal'>
+								<form id='signupForm' onsubmit='return signupModalSubmit ();'>
+									<!-- This is the SIGNUP modal -->
+									
+									<div class='form-group'>
+										<label for='emailSignup'>Email</label>
+										
+										<input class='form-control modal-text-input' type='email' placeholder='Enter Email Address' id='emailSignup' required></input>
+									</div>
+									
+									
+									
+									<div class='form-group'>
+										<label for='firstNameSignup'>First Name</label>
+										
+										<input class='form-control modal-text-input' type='text' placeholder='Enter First Name' id='firstNameSignup' required></input>
+									</div>
+									
+									
+									
+									<div class='form-group'>
+										<label for='lastNameSignup'>Last Name</label>
+										
+										<input class='form-control modal-text-input' type='text' placeholder='Enter Last Name' id='lastNameSignup' required></input>
+									</div>
+									
+									
+									
+									<div class='form-group'>
+										<label for='pwInitialSignup'>Enter Password</label>
+										
+										<input class='form-control modal-text-input' type='password' placeholder='Enter Password' id='pwInitialSignup' required></input>
+									</div>
+									
+									
+									
+										
+									<div class='form-group col-md-6 pull-left'>
+										<label for='pwConfirmSignup'>Confirm Password</label>
+									
+										<input class='form-control modal-text-input' type='password' placeholder='Confirm Password' id='pwConfirmSignup' required></input>
+									</div>
+									
+									<div class='col-md-6'>
+										<h6 id='pwCheckSignup'></h6>
+									</div>
+									
+									
+									
+									<div class='form-group col-md-12'>
+										<div class='col-md-6 text-left'>
+											<button class='btn btn-success' id='signupSubmit'>Submit</button>
+										</div>
+										
+										<div class='col-md-6 text-right'>
+											<button class='btn btn-post-close' data-dismiss='modal'>Cancel</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							
+							
+							
+							
+							<!-- This is the LOGIN post modal -->
+							<div id='loginModal'>
+								<form id='loginForm' onsubmit='return loginModalSubmit ();'>
+									<!-- This is the LOGIN modal -->
+									<div class='form-group'>
+										<label for='emailLogin'>Email</label>
+										
+										<input type='email' class='form-control modal-text-input' id='emailLogin' placeholder='Enter Email' required></input>
+									</div>
+									
+									<div class='form-group'>
+										<label for='pwLogin'>Password</label>
+										
+										<input type='password' class='form-control modal-text-input' id='pwLogin' placeholder='Enter Password' required></input>
+									</div>
+									
+									<div class='form-group col-md-12'>
+										<div class='col-md-6 text-left'>
+											<button class='btn btn-success' id='loginSubmit'>Submit</button>
+										</div>
+
+										<div class='col-md-6 text-right'>
+											<button class='btn btn-post-close' data-dismiss='modal'>Cancel</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+						</div> 
+						
+						
+						
+						 
+						 
+						<!-- This is LEFT BLANK so that the Submit Button and the Cancel Button can be included SPECIFIC to each specific Modal Entry Form -->
+						<div class='modal-footer'>
+							<!-- <div class='col-md-6 text-left'>
+								<button class='btn btn-success'>Submit</button>
+							</div>
+						
+						
+							<div class='col-md-6 text-right'>
+								<button class='btn btn-post-close' data-dismiss='modal'>Cancel</button>
+							</div>
+							-->
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			<!--
+			<div class='col-md-12' id='postedClassified'>
+				<table class='table table-bordered text-center'>
+					<thead>
+						<tr>
+							<td>Post Date</td>
+							<td>Username</td>
+							<td>Topic</td>
+							<td>Subtopic</td>
+							<td>Statement</td>
+						</tr>
+					</thead>
+					
+					<tbody id='postedClassifiedTableDisplay'>
+					</tbody>
+				</table>
+			</div> -->
+			
+			
+			
+			
+		
+			
+			
+			
+			
+			<!--
+			<div class='col-md-12' id='review'>
+				<div class='col-md-12' id='reviewMenu'>
+						<form>
+							<div class='form-group col-md-6 text-center' id='reviewSearch'>
+								<label for='reviewSearchField'>Search Company Reviews</label>
+									
+								<div class='input-group'>
+									<input type='text' id='reviewSearchField' class='form-control col-md-5' placeholder='Enter Company Homepage'></input>
+									
+									<span class='input-group-btn'>
+										<button id='reviewSearchButton' class='btn btn-success' onclick='#'> <i class="glyphicon glyphicon-search"></i> </button>
+									</span>
+								</div>
+							</div>
+						</form>
+							
+							<br><br><br><br>
+							
+							<div class='col-md-12' id='reviewSubmit'>
+								<!-- <label for='reviewCreateButton'>Create Review</label> - ->
+								<div class='help-block'></div>
+								<div class='help-block'></div>
+								<div class='help-block'></div>
+								
+								<button id='reviewPostButton' class='form-control btn btn-success post-btn' data-toggle='modal' data-target='#inputModal'>
+									<span>Post Review &nbsp; &nbsp;</span>
+									<i class='fa fa-comment-o'></i>
+								</button>
+							</div>
+				<!-- </form> - ->
+				</div>
+			</div>
+			-->
+			
+			
+		
+		</div>
+		
+		
+		
+		
+			<div class='col-md-12 footer'>
+				<div class='col-md-2'>
+					<!-- <span> -- >&copy; 2016<!-- </span> -->
+				</div>
+				
+				<div class='col-md-10'>
+					<ul class='nav navbar-nav'>
+						<li> <a href='javascript:' >&copy; 2016</a> </li>
+					
+						<li> <a href='javascript:' class='navbar-option'>Legal Concerns</a> </li>
+									
+									
+									
+									
+									
+						<li> <a href='javascript:' class='navbar-option'>Contact Us</a> </li>
+									
+										
+						<!-- <li>About Us</li> -->
+						<li> <a href='javascript:' class='navbar-option'>Partners</a> </li>
+						<li> <a href='javascript:' class='navbar-option'>San Can Actus Jobs</a> </li>
+					</ul>
+				</div>
+			</div>
+			
+	</div>
+		
+	</body>
+	
+	
+	
+	
+			
+</html>

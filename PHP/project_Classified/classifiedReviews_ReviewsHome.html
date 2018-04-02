@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+
+
+
+<html>
+	<head>
+		<title>Classified Reviews</title>
+		
+		
+		
+		
+		<!-- Latest compiled and minified BOOTSTRAP CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+		<!-- Custom css file -->
+		<link rel='stylesheet' href='classifiedReviews.css'></link>
+		
+		<!-- Custom JamScript Font css file -->
+		<link rel='stylesheet' href='classifiedReviews_JamScript_CustomFont.css'></link>
+		
+		<!-- font-awesome icons for classifieds (self-employment) -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		
+		
+		
+		
+		
+		<!-- jQuery CDN -->
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+				
+		<!-- Latest compiled and minified BOOTSTRAP JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+		<!-- Custom js file -->
+		<script type='text/javascript' src='classifiedReviews.js'></script>
+	</head>
+	
+	
+	
+	
+	<body onload='navbarPageLoad ();'>
+		
+		<nav class='navbar'>
+				<div class='col-md-12'>
+					<div class='col-md-8 col-md-offset-2 text-center site-title'>
+						<h1>Clean List</h1>
+					</div>
+				</div>
+				
+				<!-- <div class='col-md-6'>
+					<div class='col-md-4 col-md-offset-1'> -->
+						<ul class='nav navbar-nav navbar-left'>
+							<li> <a class='navbar-option' href='classifiedReviews.html' id='classifiedSelector'>Classifieds</a> </li>
+							<li> <a class='navbar-option' href='#' id='reviewSelector'>Reviews</a> </li>
+							<li> <a class='navbar-option' href='#' id='aboutSelector'>About Us</a> </li>
+						</ul>
+				<!--	<div>
+				<div> -->
+				
+				
+					<ul	class='nav navbar-nav navbar-right'>
+						<li> <a class='navbar-option' href='#' id='signupSelector' data-toggle='modal' data-target='#inputModal'>signup</a> </li>
+						<li> <a class='navbar-option' href='#' id='loginSelector' data-toggle='modal' data-target='#inputModal'>login</a> </li>
+						
+						<li class='dropdown pull-right'> <a class='navbar-dropdown-option' href='#' class='dropdown-toggle' data-toggle='dropdown' id='usernameSelector'> <span id='usernameText'>Stephen</span> <span class='caret'></span> </a>
+							<ul class='dropdown-menu'>
+								<li>submitted reviews</li>
+								<li> <a class='navbar-option dropdown-user-navigation-option' href='classifiedReviews_Post_UserList.html' id='userPostedClassifiedSelector'>my classifieds</a> </li>
+								<li>messages</li>
+								<li>logout</li>
+							</ul>
+						</li>
+					</ul>
+				
+		
+		</nav>
+		
+		
+		
+		
+		
+		<div class='container col-md-12'>
+		
+			<div class='help-block'></div>
+			
+			<div class='col-md-12' id='review'>
+				<div class='col-md-12' id='reviewMenu'>
+						<form>
+							<div class='form-group col-md-6 text-center' id='reviewSearch'>
+								<!--<label for='reviewSearchField'>Search Company Reviews</label>-->
+									
+								<div class='input-group'>
+									<input type='text' id='reviewSearchField' class='form-control col-md-5' placeholder='Search Company Reviews'></input>
+									
+									<span class='input-group-btn'>
+										<button id='reviewSearchButton' class='btn btn-success' onclick='#'> <i class="glyphicon glyphicon-search"></i> </button>
+									</span>
+								</div>
+							</div>
+						</form>
+						
+						<div class='col-md-4' id='reviewSubmit'>
+								<!--
+								<div class='help-block'></div>
+								<div class='help-block'></div>
+								<div class='help-block'></div>
+								-->
+								
+								<button id='reviewPostButton' class='form-control btn btn-success post-btn' data-toggle='modal' data-target='#inputModal'>
+									<span>Post Review &nbsp; &nbsp;</span>
+									<i class='fa fa-comment-o'></i>
+								</button>
+							</div>
+							
+							<br><br><br><br>
+							
+							<!--
+							<div class='col-md-12' id='reviewSubmit'>
+								
+								<div class='help-block'></div>
+								<div class='help-block'></div>
+								<div class='help-block'></div>
+								
+								<button id='reviewPostButton' class='form-control btn btn-success post-btn' data-toggle='modal' data-target='#inputModal'>
+									<span>Post Review &nbsp; &nbsp;</span>
+									<i class='fa fa-comment-o'></i>
+								</button>
+							</div>
+							-->
+				<!-- </form> -->
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<div class='modal modal-fade' id='inputModal' data-backdrop='static'>
+				<div class='modal-dialog'>
+					<div class='modal-content'>
+						<div class='modal-header'>
+							<button class='close' data-dismiss='modal'>&times;</button>
+							<h4 id='inputModalTitle'></h4>
+						</div>
+						
+						
+						
+						
+						<!-- This is where the user INTERACTS with Classifieds information -->
+						<div class='modal-body' id='inputModalBody'>
+							
+							
+							
+							
+							<!-- This is the CLASSIFIED post modal -->
+							<div id='classifiedPostModal'>
+								<!-- the 'enctype' and 'method' are needed for being able to upload files (images, videos, etc) -->
+								<form id='classifiedPostForm' onsubmit='return classifiedModalSubmit();' enctype='multipart/form-data' method='post'>
+									
+									<div class='form-group'>
+										<label for='classifiedTopicInput'>Post Topic</label>
+										
+										<input type='text' class='form-control modal-text-input' id='classifiedTopicInput' required></input>
+									</div>
+									
+									<div class='form-group'>
+										<label for='classifiedSubtopicInput'>Post Subtopic</label>
+										
+										<input type='text' class='form-control modal-text-input' id='classifiedSubtopicInput' required></input>
+									</div>
+									
+									<div class='form-group'>
+										<label for='classifiedStatementInput'>Post Statement</label>
+										
+										<textarea class='form-control' id='classifiedStatementInput' required></textarea>
+									</div>
+									
+									<!--
+									<div class='form-group'>
+										<label for='classifiedPhotosInput'>Upload Photos</label>
+										
+										<input type='file' class='form-control' id='classifiedInput' name='files[]' multiple></input>
+									</div>
+									-->
+									
+									<div class='form-group'>
+										<label for='reviewPhotosInput'>Upload Photos</label>
+										
+										<input type='file' class='form-control' id='reviewPhotosInput' name='files[]' multiple></input>
+									</div>
+									
+									
+									<div class='form-group col-md-12'>
+										<div class='col-md-6 text-left'>
+											<button class='btn btn-success'>Submit</button>
+										</div>
+									
+									
+										<div class='col-md-6 text-right'>
+											<button class='btn btn-post-close' data-dismiss='modal'>Cancel</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							
+							
+							
+							
+							
+							
+							<!-- This is the REVIEW post modal -->
+							<div id='reviewPostModal'>
+								<form>
+									This is the REVIEW post modal
+								</form>
+							</div>
+							
+							
+							
+							
+							
+							
+							<!-- This is the SIGNUP post modal -->
+							<div id='signupModal'>
+								<form>
+									This is the SIGNUP modal
+								</form>
+							</div>
+							
+							
+							
+							
+							
+							<!-- This is the LOGIN post modal -->
+							<div id='loginModal'>
+								<form>
+									This is the LOGIN modal
+								</form>
+							</div>
+							
+						</div> 
+						
+						
+						
+						 
+						 
+						<!-- This is LEFT BLANK so that the Submit Button and the Cancel Button can be included SPECIFIC to each specific Modal Entry Form -->
+						<div class='modal-footer'>
+							<!-- <div class='col-md-6 text-left'>
+								<button class='btn btn-success'>Submit</button>
+							</div>
+						
+						
+							<div class='col-md-6 text-right'>
+								<button class='btn btn-post-close' data-dismiss='modal'>Cancel</button>
+							</div>
+							-->
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+	</body>
+</html>
