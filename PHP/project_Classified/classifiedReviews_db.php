@@ -1,7 +1,7 @@
 <?php
 	$server = 'localhost';
 	$user = 'classified_reviews';
-	$password = 'p4S5w0R6';
+	$password = '*********';
 	$database = 'classified_reviews';
 	
 	$connect = mysqli_connect ($server, $user, $password, $database);
